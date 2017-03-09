@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+#message {
+  display: none;
+}
+#message.ok {
+  display: block;
+  background-color: #ccffee;
+  border: solid 2px #99ddaa;
+  border-radius: 8px;
+  padding: 0.8em;
+  color: #558877;
+  font-weight: bold;
+}
+#message.ok:before {
+  content: "✔";
+  color: #558877;
+  font-size: 120%;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+#message.error {
+  display: block;
+  background-color: #ffccdd;
+  border: solid 2px #dd8899;
+  border-radius: 8px;
+  padding: 0.8em;
+  color: #995566;
+  font-weight: bold;
+}
+#message.error:before {
+  content: "✖";
+  color: #995566;
+  font-size: 120%;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+    </style>
+  </head>
+  <body>
+    <div id="message"/>
+    <script src="./util.js"></script>
+    <script src="./engine.js"></script>
+    <script src="./vhost.js"></script>
+    <script src="./hatena.js"></script>
+    <script src="./setup.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
