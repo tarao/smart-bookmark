@@ -3,6 +3,9 @@
   <meta name="referrer" content="never" />
   <meta name="referrer" content="no-referrer" />
   <meta id="refresh" http-equiv="Refresh" />
+</head>
+<body>
+  <div id="no-url" style="display:none">No redirect URL specified</div>
   <script>
    var url = location.search.substr(1).split('&').reduce(function(r, param) {
      if (r) return r;
@@ -17,8 +20,5 @@
      document.querySelector('#no-url').style.display = '';
    }
   </script>
-</head>
-<body>
-  <div id="no-url" style="display:none">No redirect URL specified</div>
 </body>
 </html>
