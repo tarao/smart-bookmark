@@ -2,16 +2,9 @@ if (typeof SmartBookmark === 'undefined') var SmartBookmark = {};
 
 (function() {
     SmartBookmark.jump = function(url) {
-        var refresh = [
-            '<html><head><meta http-equiv="refresh" content="0;url=',
-            url,
-            '" /></head></html>',
-        ].join('');
         setTimeout(function() {
-            document.location.href = [
-                'data:text/html;charset=utf-8,',
-                encodeURIComponent(refresh),
-            ].join('');
+            document.location.href =
+                './redirect.html?url=' + encodeURIComponent(url);
         }, 0);
     };
 
